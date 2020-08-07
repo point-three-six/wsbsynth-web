@@ -1,0 +1,91 @@
+.rainbow-wrapper { 
+    z-index:100;
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  background: linear-gradient(124deg, rgba(255,36,0,.4), rgba(232,29,29,.4), rgba(232,183,29,.4), rgba(227,232,29,.4), rgba(29,232,64,.4), rgba(29,221,232,.4), rgba(43,29,232,.4), rgba(221,0,243,.4), rgba(221,0,243,.4));
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: grdrain 18s ease infinite;
+  -z-animation: grdrain 18s ease infinite;
+  -o-animation: grdrain 18s ease infinite;
+    animation: grdrain 18s ease infinite;
+
+    pointer-events: none;
+}
+  
+  @-webkit-keyframes grdrain {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes grdrain  {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes grdrain  {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes grdrain  { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+
+.rainbow {
+  background: #1D1F20;
+  position: relative;
+  border-radius:0 !important;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+}
+.rainbow:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * 3px);
+  left: calc(-1 * 3px);
+  height: calc(100% + 3px * 2);
+  width: calc(100% + 3px * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: 10px !important;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-webkit-keyframes rainbow {
+    0% {background-color: hsl(0, 100%, 50%);}
+    14% {background-color: hsl(30,100%,50%);}
+    28% {background-color: hsl(60,100%,50%);}
+    42% {background-color: hsl(120,100%,50%);}
+    56% {background-color:  hsl(240,100%,50%);}
+    70% {background-color: hsl(280,100%,50%);}
+    84% {background-color: hsl(320,100%,50%);}
+    100% {background-color: hsl(255, 100%, 50%);}
+  }
+  
+  .rainbow {
+    -webkit-animation: rainbow 6s infinite alternate;
+  }

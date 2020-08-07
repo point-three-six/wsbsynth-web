@@ -1,0 +1,386 @@
+body, html {
+    background-color:#232222;
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin-bottom:100px;
+}
+
+a {
+    color:rgb(209, 157, 60);
+    text-decoration:none;
+}
+
+#bg-chart { 
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:-1;
+}
+
+#container {
+    margin:0 auto;
+    max-width:800px;
+    width:100%;
+}
+
+#comments .comment-container{
+    padding:8px 0;
+}
+
+#comments .comment{
+    background-color:#181717;
+    border-bottom:1px solid rgb(58, 50, 35);
+    color:#b4b2b2;
+    margin:0 auto;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#comments .comment .info {
+    margin:8px 0px;
+}
+
+#comments .comment .author {
+    margin-left:15px;
+}
+
+#comments .comment .permalink {
+    margin-right:15px;
+}
+
+#comments .comment .body {
+    margin:8px 15px 8px 15px;
+    font-size:1.25em;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+#comments .comment .tickers {
+    margin:8px 15px 8px 15px;
+}
+
+#comments .comment .tickers a {
+    color:white;
+}
+
+#comments .comment .tickers .ticker {
+    font-size:.80em;
+    background-color:rgb(58, 50, 35);
+    border-radius:8px;
+    color:white;
+    padding:2px 6px;
+    margin:0 3px;
+    cursor:pointer;
+}
+
+#ticker-counts .ticker {
+    display:inline-block;
+    background-color:rgb(58, 50, 35);
+    border-radius:8px;
+    color:white;
+    padding:2px 6px;
+    margin:4px 3px;
+    cursor:pointer;
+}
+
+#ticker-counts .ticker .symbol {
+    display:inline-block;
+}
+
+#ticker-counts .ticker .count {
+    display:inline-block;
+    margin-right:3px;
+}
+
+#player{
+    bottom:0;
+    position:fixed;
+    width:100%;
+    background-color:#1b1b1b;
+    border-top:1px solid #2e2e2e;
+    color:white;
+    text-align:center;
+    color:white;
+}
+
+#loading, #welcome { 
+    font-size:1.2em;
+    color:rgb(209, 157, 60);
+    text-align:center;
+    width: 100%;
+    margin-top:100px;
+}
+
+#settings {
+    margin-top:10px;
+    color:rgb(209, 157, 60);
+}
+
+.margin-top {
+    margin-top:10px;
+}
+
+.margin-top-20 {
+    margin-top:20px;
+}
+
+.mini-logo {
+    width:40px;
+    height:40px;
+}
+
+.hidden {
+    display:none;
+}
+
+.play_button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 63px;
+    border-color: transparent transparent transparent rgb(209, 157, 60);
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 30px 0 30px 53px;
+    margin-top:12px;
+    margin-bottom:12px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline:none;
+}
+.play_button.paused {
+    border-style: double;
+    border-width: 0px 0 0px 53px;
+    margin-right:26px;
+}
+.play_button:hover {
+    border-color: transparent transparent transparent rgb(167, 126, 51);
+}
+
+.flex-container {
+    display:flex;
+    width:100%;
+    flex-direction: row;
+}
+
+.flex { 
+    flex:1;
+}
+
+.text-left {
+    text-align:left;
+}
+
+.text-right {
+    text-align:right;
+}
+
+.text-center {
+    text-align:center;
+}
+
+#info {
+    color:#b4b2b2;
+    margin-top:10px;
+}
+
+#listeners i {
+    margin-left:13px;
+}
+
+.tooltip {
+    cursor:pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(209, 157, 60, .7);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom:100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(209, 157, 60, .7) transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#select-voice, #max-backlog, #audio-easter-eggs {
+    font-size:1.05em;
+    padding:5px;
+    background-color:#181717;
+    border:1px solid rgb(58, 50, 35);
+    color:#b4b2b2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline:none;
+}
+
+.clear {
+    clear:both;
+}
+
+#audio-slider {
+   color: rgb(209, 157, 60);
+}
+
+.flair {
+    display:inline-block;
+    color:rgb(162, 150, 128);
+    border-radius:10px;
+    font-size:.75em;
+    margin-left:8px;
+    padding:2px 7px;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+      background-position: 500% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  @-ms-keyframes rainbow {
+    0% {
+      background-position: 500% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+@keyframes rainbow {
+    0% {
+      background-position: 500% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .rainbow {
+    background: #000;
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+
+.rainbow::after {
+    content: "";
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+    background-size: 500% 500%;
+    animation-name: rainbow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.comment.rainbow .author a, .comment.rainbow .permalink .fas {
+    background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_text_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+.comment.rainbow .ticker {
+    background-color: transparent;
+}
+
+.comment.rainbow .ticker { 
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: relative;
+  background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbowbg 10s ease infinite;
+  -z-animation: rainbowbg 10s ease infinite;
+  -o-animation: rainbowbg 10s ease infinite;
+    animation: rainbowbg 10s ease infinite;
+}
+
+@keyframes rainbow_text_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@-webkit-keyframes rainbowbg {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbowbg {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbowbg {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbowbg { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}

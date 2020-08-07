@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="Description" CONTENT="Live audio stream of the wallstreetbets daily discussion thread.">
+        <title>
+            WSBSynth
+        </title>
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+        <link href="assets/css/style.css?v=18" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b48fc18af5.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/client.js?v=46"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div class="margin-top">
+                <nav class="flex-container">
+                    <div class="flex text-left">
+                        <img style="vertical-align:middle" src="assets/images/wsb_headphones.png" class="mini-logo">
+                        <a href="https://www.reddit.com/r/wallstreetbets/" target="_blank"><span style="color:#b4b2b2;">r/wallstreetbets</span></a>
+                    </div>
+                    <div id="info" class="flex text-center">
+                        <span id="conn-status">disconnected</span>
+                        <span id="listeners" class="hidden">
+                            <div class="tooltip">
+                                <i class="fas fa-user-tie"></i>
+                                <span id="num-listeners">0</span>
+                                <div class="tooltiptext">Active listeners</div>
+                            </div>
+                      
+                            <div class="tooltip">
+                                <i class="fas fa-bookmark"></i>
+                                <span id="num-backlogged">0</span>
+                                <div class="tooltiptext">Comment backlog<br/>(max <span id="num-max-backlogged"></span>)</div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="flex text-right" style="margin-top:7px;">
+                        <!--<a href="#" id="btn-settings"><img src="assets/images/cog.png" width="40" height="40"/></a>-->
+                        <a href="data/" target="_blank" style="text-decoration:underline;color:#b4b2b2;margin-right:8px;">comment data</a>
+                        <a href="about.htm" target="_blank" style="text-decoration:underline;color:#b4b2b2;">learn more</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="home">
+                <div id="welcome">
+                    Click play or press spacebar to start.
+                </div>
+    
+                <div id="loading" class="hidden">
+                    Connecting to comment stream
+                </div>
+                <div id="extra" class="hidden">
+                    <div class="flex-container margin-top" style="margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #2c2b2b;;">
+                        <div class="flex">
+                            <a id="current_dd" href="#" target="_blank" style="font-size:1.05em;margin:5px;display:inline-block;text-decoration:underline;">
+                                Loading info . . .
+                            </a>
+                        </div>
+                        <div class="flex text-right">
+                            <!--<a href="#" id="btn-feedback" style="font-size:1em;margin-right:12px;">
+                                <i class="fas fa-pencil-alt"></i> feedback
+                            </a>-->
+                            <a href="#" id="btn-settings" style="font-size:1em;">
+                                <i class="fa fa-cog fa-fw"></i> settings
+                            </a>
+                        </div>
+                    </div>
+                    <div id="ticker-counts" class="margin-top"></div>
+                </div>
+                <div id="comments" class="margin-top-20 hidden"></div>
+            </div>
+            <div id="settings" class="hidden">
+                <table cellpadding="10">
+                    <tr>
+                        <td>
+                            Voice
+                        </td>
+                        <td>
+                            <select id="select-voice">
+                                <option value="Brian" selected>Brian (Male, British)</option>
+                                <!--<option value="Matthew">Matthew (Male, U.S.)</option>-->
+                                <option value="Justin">Justine (Female, U.S.)</option>
+                                <!--<option value="Amy">Amy (Female, British)</option>-->
+                                <!-- <option value="Nicole">Nicole (Female, Australian)</option>
+                                <option value="Aditi">Aditi (Female, Hindi)</option> -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Voice Speed
+                        </td>
+                        <td>
+                            <input type="range" min="5" max="20" value="10" id="playback-speed">
+                            <span id="playback-speed-val">
+                                1
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Volume
+                        </td>
+                        <td>
+                            <input type="range" min="0" max="100" value="100" id="audio-slider">
+                            <span id="audio-slider-val">
+                                100
+                            </span>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Max Backlog
+                        </td>
+                        <td>
+                            <input type="number" min="0" value="25" id="max-backlog">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Audio Easter Eggs
+                        </td>
+                        <td>
+                            <select id="audio-easter-eggs">
+                                <option value="enabled" selected>Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center margin-top" style="font-size:1.25em;">
+                    <a href="#" id="settings-back" style="border:1px solid rgb(167, 126, 51);padding:10px;">Done</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="player">
+            <button class="play_button"></button>
+        </div>
+
+        <audio id="audio"></audio>
+    </body>
+</html>

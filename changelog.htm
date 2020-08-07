@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            WSBSynth - About
+        </title>
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"><style>
+            body, html {
+                background-color:#232222;
+                padding:0;
+                margin:0;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            body {
+                margin-bottom:100px;
+            }
+
+            a {
+                color:rgb(209, 157, 60);
+                text-decoration:none;
+            }
+
+            nav {
+                text-align:center;
+                padding:10px 0;
+            }
+
+            #changelog {
+                margin-top:30px;
+                color:#918d8a;
+            }
+
+            #container {
+                margin:0 auto;
+                width:800px;
+            }
+
+            .margin-top {
+                margin-top:10px;
+            }
+
+            .margin-top-20 {
+                margin-top:20px;
+            }
+
+            .mini-logo {
+                width:90px;
+                height:90px;
+            }
+
+            .hidden {
+                display:none;
+            }
+
+            .flex-container {
+                display:flex;
+                width:100%;
+                flex-direction: row;
+            }
+
+            .flex { 
+                flex:1;
+            }
+
+            .text-left {
+                text-align:left;
+            }
+
+            .text-right {
+                text-align:right;
+            }
+
+            h1 {
+                margin-top:50px;
+                color:rgba(209, 157, 60, .7);
+            }
+
+            ::-moz-selection { background-color: rgb(230, 183, 97);}
+            ::selection { background-color:rgb(230, 183, 97); }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="/">
+                <img style="vertical-align:middle" src="assets/images/wsb.png" class="mini-logo">
+            </a>
+        </nav>
+        <div id="container">
+            <div id="changelog">
+                <h1>Changelog</h1>
+                <h2>
+                    August 5th, 2020
+                </h2>
+                <ul>
+                    <li>Aditi & Nicole voices removed to help reduce operational costs</li>
+                </ul>
+                <h2>
+                    July 25th, 2020
+                </h2>
+                <ul>
+                    <li>Added voice speed option to settings</li>
+                </ul>
+                <h2>
+                    July 21st, 2020
+                </h2>
+                <ul>
+                    <li>Added ability to change max comment backlog in settings</li>
+                </ul>
+                <h2>
+                    July 16th, 2020
+                </h2>
+                <ul>
+                    <li>Fixed issue with comments not loading on iOS devices</li>
+                    <li>Added support for user flairs</li>
+                </ul>
+                <h2>
+                    July 15th, 2020
+                </h2>
+                <ul>
+                    <li>Will no longer say entire name of stock if too long (e.g.: just says <i>SPY</i> now instead of <i>SPDR S&P 500 ETF Trust</i>)</li>
+                </ul>
+                <h2>
+                    July 12th, 2020
+                </h2>
+                <ul>
+                    <li>Added ability to see mention history for individual stocks (<a href="data/stock.php?symbol=TSLA">example</a>)</a></li>
+                    <li>Added audio control to comment player</li>
+                    <li>Increased accuracy of stock mentions</li>
+                </ul>
+                <h2>
+                    July 9th, 2020
+                </h2>
+                <ul>
+                    <li>Added <a href="live/">live mentions</a> page to track stock mentions</li>
+                </ul>
+                <h2>
+                    July 7th, 2020
+                </h2>
+                <ul>
+                    <li>Increased accuracy of stock symbol mentions</li>
+                </ul>
+                <h2>
+                    July 6th, 2020
+                </h2>
+                <ul>
+                    <li>Added live display that shows 10 most mentioned stocks for current daily thread</li>
+                </ul>
+                <h2>
+                    June 28th, 2020
+                </h2>
+                <ul>
+                    <li>Fixed issue with comments that were already loaded not switching to new voice when changed</li>
+                    <li>Added limit to comment backlog (new messages discared when max reached)</li>
+                    <li>Added a limit to number of audio files to be preloaded in advanced</li>
+                </ul>
+                <h2>
+                    June 26th, 2020
+                </h2>
+                <ul>
+                    <li>Added 4 new voices: Matthew, Justine, Aditi, Amy, and Nicole</li>
+                    <li>Added title and link to current daily discussion</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
