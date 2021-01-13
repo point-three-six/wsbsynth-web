@@ -4,7 +4,7 @@
         <title>
             WSBSynth - Live Stock Mentions
         </title>
-        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="shortcut icon" href="../assets/images/wsbsynth_min.png" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"><style>
             body, html {
                 background-color:#232222;

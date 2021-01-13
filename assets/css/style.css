@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrate&display=swap');
+
 body, html {
     background-color:#232222;
     padding:0;
@@ -6,7 +8,10 @@ body, html {
 }
 
 body {
-    margin-bottom:100px;
+    display: flex;
+    margin-bottom: 100px;
+    height: 100vh;
+    margin: 0;
 }
 
 a {
@@ -120,6 +125,19 @@ a {
     color:rgb(209, 157, 60);
 }
 
+.button_link {
+    font-size:1em;
+    background: none;
+    border:none;
+    padding:0;
+    margin:0;
+    color:rgb(209, 157, 60);
+    cursor:pointer;
+    outline:none;
+    font-weight: normal;
+    font:inherit !important;
+}
+
 .margin-top {
     margin-top:10px;
 }
@@ -181,12 +199,12 @@ a {
     text-align:left;
 }
 
-.text-right {
-    text-align:right;
-}
-
 .text-center {
     text-align:center;
+}
+
+.text-right {
+    text-align:right;
 }
 
 #info {
@@ -316,20 +334,22 @@ a {
     border-bottom-right-radius: 10px;
     height: 3px;
     width: 100%;
-    background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+    /* background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400); */
+    background: linear-gradient( 60deg, #fce355, #9e8808, #FFD700, #fce355);
     background-size: 500% 500%;
     animation-name: rainbow;
-    animation-duration: 20s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 .comment.rainbow .author a, .comment.rainbow .permalink .fas {
-    background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+    /* background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400); */
+    background: linear-gradient( 60deg, #fce355, #9e8808, #FFD700, #fce355);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_text_animation 6s ease-in-out infinite;
+    animation: rainbow_text_animation 10s ease-in-out infinite;
     background-size: 400% 100%;
 }
 
@@ -345,13 +365,122 @@ a {
     top: 0;
     bottom: 0;
     position: relative;
-  background: linear-gradient( 60deg, #ff2400, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+    background: linear-gradient( 60deg, #9e8808, #FFD700, #fce355);
   background-size: 1800% 1800%;
   
   -webkit-animation: rainbowbg 10s ease infinite;
   -z-animation: rainbowbg 10s ease infinite;
   -o-animation: rainbowbg 10s ease infinite;
     animation: rainbowbg 10s ease infinite;
+}
+
+.progress {
+    text-align: right;
+    align-self: center;
+    background-color: #1b1b1b;
+    border-color: #ffd899;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 20px;
+    width: 175px;
+    float: right;
+    overflow:hidden;
+}
+
+.progress-done {
+    font-size:.8em;
+    background: linear-gradient(to left, #FEC84E, #ffd899);
+    box-shadow: 0 3px 3px -5px #FEC84E, 0 2px 5px #FEC84E;
+    border-radius: 20px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height: 100%;
+    width: 0;
+    transition: 1s ease;
+}
+
+.donation {
+    margin-right: 5px;
+}
+
+.down-arrow {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2px;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #FEC84E;
+}
+a:hover {
+    color: #ffb70e;
+}
+
+.about {
+    justify-content: center;
+    text-align: center;
+}
+
+.selectize-control.single .selectize-input {
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:  none !important;
+}
+
+.selectize-input input {
+    color:#fff !important;
+}
+
+.selectize-input, .selectize-dropdown {
+    font-size:1.05em !important;
+    padding:5px !important;
+    background-color:#181717 !important;
+    border:1px solid rgb(58, 50, 35) !important;
+    color:#b4b2b2 !important;
+}
+
+.selectize-dropdown .create {
+    background-color:#181717 !important;
+    color:#b4b2b2 !important;
+}
+
+.selectize-input [data-value] {
+    background-color:rgb(209, 157, 60) !important;
+    background-image:-webkit-gradient(linear,0 0,0 100%,from(rgb(209, 157, 60)),to(rgb(129, 97, 36))) !important;
+    background-image:-webkit-linear-gradient(top,rgb(209, 157, 60),rgb(129, 97, 36)) !important;
+    background-image:-o-linear-gradient(top,rgb(209, 157, 60),rgb(129, 97, 36)) !important;
+    background-image:linear-gradient(to bottom,rgb(209, 157, 60),rgb(129, 97, 36)) !important;
+    background-repeat: repeat-x !important;
+    border:1px solid rgb(58, 50, 35) !important;
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove {
+    border-left:1px solid rgb(58, 50, 35) !important;
+}
+
+.screen-center {
+    border:1px solid red;
+    z-index:9999;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:600px;  /* adjust as per your needs */
+    height:600px;   /* adjust as per your needs */
+    margin-left:-300px;   /* negative half of width above */
+    margin-top:-300px;   /* negative half of height above */
+    border-radius:5px;
 }
 
 @keyframes rainbow_text_animation {

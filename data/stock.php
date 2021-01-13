@@ -99,7 +99,7 @@
         <title>
             WSBSynth - <?= $symbol ?> mentions
         </title>
-        <link rel="shortcut icon" href="../assets/images/favicon.png" />
+        <link rel="shortcut icon" href="../assets/images/wsbsynth_min.png" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"><style>
             body, html {
                 background-color:#232222;
@@ -298,7 +298,7 @@
          <script src="https://kit.fontawesome.com/b48fc18af5.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             $(document).ready(function(){
                 var requested_stocks = [];
 
@@ -402,17 +402,17 @@
                 
                 //setInterval(get_data, 60000);
             });
-        </script>
+        </script> -->
     </head>
     <body>
         <nav>
             <a href="/">
-                <img style="vertical-align:middle" src="../assets/images/wsb.png" class="mini-logo">
+                <img style="vertical-align:middle" src="../assets/images/wsbsynth_min.png" class="mini-logo">
             </a>
         </nav>
         <div id="container">
             <h1>Stock mentions for <?=$symbol_data['company']?></h1>
-            <canvas id="chart-day"></canvas>
+            <!-- <canvas id="chart-day"></canvas> -->
             <a name="comments"></a>
             <div style="color:#868686;margin-top:15px;">
                 showing <?=number_format(count($comments))?> results of <?= number_format($total_comments) ?>

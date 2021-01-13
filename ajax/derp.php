@@ -1,0 +1,1 @@
+["appl","gay","msft","chgg"]

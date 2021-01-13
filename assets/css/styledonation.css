@@ -1,0 +1,110 @@
+body, html {
+    background-color:#232222;
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin-bottom:100px;
+}
+
+a {
+    color:rgb(209, 157, 60);
+    text-decoration:none;
+}
+
+nav {
+    text-align:center;
+    padding:10px 0;
+}
+
+#about {
+    margin-top:30px;
+    color:#918d8a;
+}
+
+#container {
+    margin:0 auto;
+    width:800px;
+}
+
+.margin-top {
+    margin-top:10px;
+}
+
+.margin-top-20 {
+    margin-top:20px;
+}
+
+.mini-logo {
+    width:90px;
+    height:90px;
+}
+
+.hidden {
+    display:none;
+}
+
+.flex-container {
+    display:flex;
+    width:100%;
+    flex-direction: row;
+}
+
+.flex { 
+    flex:1;
+}
+
+.text-left {
+    text-align:left;
+}
+
+.text-right {
+    text-align:right;
+}
+
+h1 {
+    margin-top:50px;
+    color:rgba(209, 157, 60, .7);
+}
+  
+.donate-container {  
+    display: inline-block;
+    margin: 20px;
+    position: center;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px;
+    display: block;
+  
+}
+.donate-container:link, .donate-container:visited {
+    color: white;
+}
+.donate-container:hover {
+    box-shadow: 5px 3px 3px -5px rgb(124, 107, 75), 0 2px 7px rgb(124, 107, 75);
+    transition: 500ms;
+}
+
+.donate-container:active {
+	position:relative;
+	top:1px;
+}
+
+  
+  .donate {
+    padding: 0px;
+    display:inline-block;
+    background: linear-gradient(to left, #ffb70e, #ffc234);
+    background-position: 0 0;
+    background-size: 200% 100%;
+    border-radius: 4px;
+    color: #fff;
+    padding: 20px 60px 20px 60px;
+    text-shadow: 1px 1px 5px #666;
+    text-align: center;
+    border-radius: 30px;
+    
+  }
